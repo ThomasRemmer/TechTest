@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
+import static java.lang.Double.parseDouble;
 import static java.lang.Integer.parseInt;
 
 public class MarketPrice{
@@ -25,11 +26,11 @@ public class MarketPrice{
         String[] messageArr = message.split(",");
         this.Id = parseInt(messageArr[0]);
         this.name = messageArr[1];
-        this.bid = Double.parseDouble(messageArr[3]);
-        this.ask = Double.parseDouble(messageArr[2]);
+        this.bid = parseDouble(messageArr[3]);
+        this.ask = parseDouble(messageArr[2]);
         this.date = messageArr[4];
-        this.BidCommission= (Double.parseDouble(messageArr[2]) * 0.99);
-        this.askCommission = (Double.parseDouble(messageArr[3]) * 1.01);
+        this.BidCommission= (parseDouble(messageArr[2]) * 0.99);
+        this.askCommission = (parseDouble(messageArr[3]) * 1.01);
         if (ask > bid ) {
             throw new IllegalArgumentException();
         }
