@@ -31,11 +31,11 @@ public class Main {
 }}
 
 /*
-Example REST endpoint using Spring-boot. marketPriceRepository class would be set up to capture and store data.
+Example REST endpoint using Spring-boot. marketPriceRepository class would be set up to post data.
 
-@PostMapping
-public String add(@RequestBody Marketprice price) {
-marketPriceRepository.addMarketPrice(price)
+@GetMapping
+public ResponseEntity<List<MarketPrice>> getPrice {
+List<MarketPrice> prices = marketPriceRepository.getAll();
 return ResponseEntity.status(HttpStatus.OK).body(price);
 }
 
