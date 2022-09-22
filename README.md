@@ -8,7 +8,7 @@ Backend JUnit testing:
 
 JUnit has been used to test the backend logic for the following:
 
--Tested to ensure data recieved though the onMessage() function is stored as a market price object.
+-Tested to ensure data received through the onMessage() function is stored as a market price object.
 
 -Tested to ensure that commission is added to each market price.
 
